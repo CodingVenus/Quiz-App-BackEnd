@@ -1,0 +1,83 @@
+CATEGORY
+Post :
+As a user, I should be able to create a CATEGORY.
+Acceptance Criteria:
+Given that I know the name of the category I would like to create...
+When I send a request to the server to create the category…
+The category will be saved into the database and be available for me to create quizzes under.
+ 
+Delete:
+As a user, I should be able to delete a category I have created.
+Acceptance Criteria:
+Given that I have selected a category that I have previously created...
+When I choose to make a request to the server to delete this category...
+It should be removed completely as a category option and from the database.
+ 
+QUIZ
+Post : 
+As a user, I should be able to create a QUIZ.
+Acceptance Criteria:
+Given that I know the name and category of the quiz I would like to create...
+When I send a request to the server to create the quiz...
+The quiz will be saved into the database and be available for me to create questions under.
+ 
+Delete:
+As a user, I should be able to delete a quiz I have created.
+Acceptance Criteria:
+Given that I have selected a quiz that I have previously created under a specific category...
+When I choose to make a request to the server to delete this quiz...
+It should be removed completely as a quiz option from the category and the database.
+ 
+QUESTION
+Post :
+As a user, I should be able to create QUESTIONS.
+Acceptance Criteria:
+Given that I know the questions I would like to create, and the name of the Quiz they will be under...
+When I send a request to the server to create each question...
+The question will be saved into the database and be available for me to see, saved under a specific quiz.
+ 
+Delete:
+As a user, I should be able to delete a question I have created.
+Acceptance Criteria:
+Given that I have selected a question that I have previously created under a specific quiz…
+When I choose to make a request to the server to delete this question...
+It should be removed completely as a question option from the quiz and the database.
+ 
+ANSWER
+Post :
+As a user, I should be able to create Four ANSWERS per Question, and select which answer is the correct one.
+Acceptance Criteria:
+Given that I know the answer options I would like to create, and the question they will be under...
+When I send a request to the server to create each answer...
+The answer will be saved into the database and be available for me to access, under the specific question.
+After creating four questions I should be prompted to select which question will serve as the correct answer.
+ 
+GAME PLAY
+As a user, I should be able to view all created quizzes; 
+Acceptance Criteria:
+Given that one or more quizzes have been created…
+I should be able to view a list of all quizzes created (from all categories)
+ 
+As a user, I should be able to view all created categories; select one of those categories; and view the quizzes connected to that category. 
+Acceptance Criteria:
+Given that one or more categories have been created...
+When I select that category…
+I should be able to view a list of all of the quizzes under that category
+ 
+As a user, I should be able to select a quiz to play.
+Acceptance Criteria:
+Given that I know the name of the quiz I would like to play…
+When I click that quiz…
+I should be led to a window that allows me to answer questions for that quiz
+ 
+As a user, I should be able to select my answer for a quiz question.
+Acceptance Criteria:
+Given that I am currently in a quiz and can view the question and four answer choices...
+When I select one of the four choices…
+I should be immediately notified if the answer is wrong or right
+ 
+As a user, I should be able to view my final results.
+Acceptance Criteria:
+Given that I am on the final question for a quiz...
+When I click on my answer to that question…
+I should be forwarded to a screen that gives me the number of questions I have gotten right and wrong and my total score.
