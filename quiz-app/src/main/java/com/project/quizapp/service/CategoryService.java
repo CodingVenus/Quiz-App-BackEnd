@@ -13,7 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 public class CategoryService {
 
-    CategoryRepository categoryRepository;
+    private final CategoryRepository categoryRepository;
 
     //POST
     public Category createCategory(Category categoryObject) {
