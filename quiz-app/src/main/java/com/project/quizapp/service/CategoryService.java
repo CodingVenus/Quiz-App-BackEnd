@@ -5,6 +5,8 @@ import com.project.quizapp.respository.CategoryRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @AllArgsConstructor
 public class CategoryService {
@@ -25,10 +27,15 @@ public class CategoryService {
 
 
 
-
     //GET ALL
-
-
+    public List<Category> getAllCategories() {
+        List<Category> categoryList = categoryRepository.findAll();
+        if (categoryList.isEmpty()) {
+            throw new InformationNotFoundException("No categories found");
+        } else {
+            return categoryList;
+        }
+    }
 
 
 }
