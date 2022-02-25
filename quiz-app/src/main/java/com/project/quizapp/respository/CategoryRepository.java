@@ -2,7 +2,9 @@ package com.project.quizapp.respository;
 
 import com.project.quizapp.model.Category;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public class CategoryRepository extends JpaRepository<Category, Long> {
+@Repository
+public interface CategoryRepository extends JpaRepository<Category, Long> {
 
 }
