@@ -14,7 +14,13 @@ public class CategoryService {
     //POST
     public Category createCategory(Category categoryObject) {
 
-        Category category = categoryRepository.findById()
+        Category category = categoryRepository.findByNameIgnoreCase(categoryObject.getCategoryName());
+
+        if (category != null) {
+            throw new InformationExistsException("Category with name " + category.getCategoryName() + " already exists");
+        } else {
+            return categoryRepository.save(categoryObject);
+        }
     }
 
 
