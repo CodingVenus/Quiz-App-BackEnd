@@ -18,10 +18,10 @@ public class CategoryService {
     //POST
     public Category createCategory(Category categoryObject) {
 
-        Category category = categoryRepository.findByCategoryNameIgnoreCase(categoryObject.getCategoryName());
+        Category category = categoryRepository.findByNameIgnoreCase(categoryObject.getName());
 
         if (category != null) {
-            throw new InformationExistsException("Category with name " + category.getCategoryName() + " already exists");
+            throw new InformationExistsException("Category with name " + category.getName() + " already exists");
         } else {
             return categoryRepository.save(categoryObject);
         }

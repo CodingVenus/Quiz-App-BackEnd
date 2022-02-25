@@ -16,13 +16,13 @@ public class CategoryController {
 
 
 //POST MAPPING
-    @PostMapping
+    @PostMapping(path = "/new")
     public Category createCategory(@RequestBody Category categoryObject) {
         return categoryService.createCategory(categoryObject);
     }
 
 //GET MAPPING
-    @GetMapping
+    @GetMapping(path = "/all")
     public List<Category> getAllCategories(){
         return categoryService.getAllCategories();
     }
