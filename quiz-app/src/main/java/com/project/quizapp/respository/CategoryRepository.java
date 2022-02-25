@@ -1,8 +1,7 @@
 package com.project.quizapp.respository;
 
+import com.project.quizapp.model.Category;
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.Locale;
 
 public class CategoryRepository extends JpaRepository<Category, Long> {
 
