@@ -64,5 +64,18 @@ public class QuestionService {
         return quiz.get().getQuestionList();
     }
 
+    //DELETE METHOD
+//DELETE BY ID
+    public String deleteQuestion(Long questionId) {
+
+        Question question = questionRepo.findById(questionId).orElseThrow(() -> new InformationNotFoundException(
+                "Question with ID " + questionId + " does not exist. Please try a different Question ID."));
+
+        questionRepo.deleteById(questionId);
+        return "Question: " + question.getQuestion() + " Id: " + questionId + " has been successfully deleted.";
+    }
+}
+
+
 }
 
