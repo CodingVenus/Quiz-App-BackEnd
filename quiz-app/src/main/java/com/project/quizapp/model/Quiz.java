@@ -18,7 +18,7 @@ public class Quiz {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String quizName;
+    private String Name;
 
 
     //MAPPING TO CATEGORY

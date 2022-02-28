@@ -34,9 +34,9 @@ public class QuizService {
 //            throw new InformationNotFoundException(
 //                    "Category with ID " + categoryId + " does not exist. Please try a different Category ID.");
 //        }
-        Quiz quiz = quizRepo.findByNameIgnoreCase(quizObject.getQuizName());
+        Quiz quiz = quizRepo.findByNameIgnoreCase(quizObject.getName());
         if (quiz != null) {
-            throw new InformationExistsException("Quiz with the name " + quiz.getQuizName() + " already exists.");
+            throw new InformationExistsException("Quiz with the name " + quiz.getName() + " already exists.");
         }
         quizObject.setCategory(category);
         return quizRepo.save(quizObject);
