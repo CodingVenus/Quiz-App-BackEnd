@@ -21,7 +21,7 @@ public class Quiz {
     private String quizName;
 
 
-    //MAPPING
+    //MAPPING TO CATEGORY
     @JsonIgnore
     @ManyToOne
     @JoinColumn(name= "category_id")
