@@ -30,10 +30,10 @@ public class QuestionService {
         Quiz quiz = quizRepo.findById(quizId).orElseThrow(()-> new InformationNotFoundException(
                 "Quiz with ID " + quizId + " does not exist. Please try a different Quiz ID."));
 
-        //it's fine if question exists under different quiz, so this validation will be for the specific quiz id
+        //it's fine if the same question exists under different quiz, so this validation will be for the specific quiz id
         Question question = questionRepo.findByQuizIdAndQuestionIgnoreCase(quizId, questionObject.getQuestion());
         if (question != null) {
-            throw new InformationExistsException("The question " + question.getQuestion() + " already exists. Please create a different Question");
+            throw new InformationExistsException("The question '" + question.getQuestion() + "' already exists. Please create a different question.");
         }
         questionObject.setQuiz(quiz);
         return questionRepo.save(questionObject);
