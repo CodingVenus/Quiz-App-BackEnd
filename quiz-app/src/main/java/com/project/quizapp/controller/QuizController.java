@@ -38,6 +38,12 @@ QuizService quizService;
         return quizService.createQuizByCategoryId(categoryId, quizObject);
     }
 
+//DELETE MAPPING
+    //DELETE BY QUIZ ID
+    @DeleteMapping("Quiz/{quizId}")
+    public String deleteQuiz(@PathVariable(value="quizId") Long quizId) {
+        return quizService.deleteQuiz(quizId);
+    }
 
 
 }

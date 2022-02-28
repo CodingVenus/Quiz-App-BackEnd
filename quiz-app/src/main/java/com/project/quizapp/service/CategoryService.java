@@ -2,7 +2,6 @@ package com.project.quizapp.service;
 
 import com.project.quizapp.exceptions.InformationExistsException;
 import com.project.quizapp.exceptions.InformationNotFoundException;
-import com.project.quizapp.model.Answer;
 import com.project.quizapp.model.Category;
 import com.project.quizapp.respository.CategoryRepository;
 import lombok.AllArgsConstructor;
@@ -47,7 +46,7 @@ public class CategoryService {
         Category category = categoryRepo.findById(categoryId).orElseThrow(() -> new InformationNotFoundException(
                 "Category with ID " + categoryId + " does not exist. Please try a different Category ID."));
 
-        categoryRepo.deleteById(cateogryId);
+        categoryRepo.deleteById(categoryId);
         return "Category: " + category.getName() + " Id: " + categoryId + " has been successfully deleted.";
     }
 
