@@ -47,7 +47,7 @@ public class CategoryService {
                 "Category with ID " + categoryId + " does not exist. Please try a different Category ID."));
 
         categoryRepo.deleteById(categoryId);
-        return "Category: " + category.getName() + " Id: " + categoryId + " has been successfully deleted.";
+        return "Category: '" + category.getName() + "' Id: " + categoryId + " has been successfully deleted.";
     }
 
 }

@@ -71,7 +71,7 @@ public class AnswerService {
                 "Answer with ID " + answerId + " does not exist. Please try a different Answer ID."));
 
         answerRepo.deleteById(answerId);
-        return "Answer: " + answer.getAnswer() + " Id: " + answerId + " has been successfully deleted.";
+        return "Answer: '" + answer.getAnswer() + "' Id: " + answerId + " has been successfully deleted.";
     }
 
 }

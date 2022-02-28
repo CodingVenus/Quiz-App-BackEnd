@@ -77,7 +77,7 @@ public class QuizService {
                 "Quiz with ID " + quizId + " does not exist. Please try a different Quiz ID."));
 
         quizRepo.deleteById(quizId);
-        return "Quiz Name: " + quiz.getName() + " Id: " + quizId + " has been successfully deleted.";
+        return "Quiz Name: '" + quiz.getName() + "' Id: " + quizId + " has been successfully deleted.";
     }
 }
 

@@ -72,7 +72,7 @@ public class QuestionService {
                 "Question with ID " + questionId + " does not exist. Please try a different Question ID."));
 
         questionRepo.deleteById(questionId);
-        return "Question: " + question.getQuestion() + " Id: " + questionId + " has been successfully deleted.";
+        return "Question: '" + question.getQuestion() + "' Id: " + questionId + " has been successfully deleted.";
     }
 }
 

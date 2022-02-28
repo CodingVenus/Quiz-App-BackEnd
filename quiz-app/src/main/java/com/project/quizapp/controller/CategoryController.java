@@ -29,7 +29,7 @@ public class CategoryController {
 
 //DELETE MAPPING
     //DELETE BY CATEGORY ID
-    @DeleteMapping("category/{categoryId}")
+    @DeleteMapping("{categoryId}")
     public String categoryQuestion(@PathVariable(value="categoryId") Long categoryId) {
         return categoryService.deleteCategory(categoryId);
     }
