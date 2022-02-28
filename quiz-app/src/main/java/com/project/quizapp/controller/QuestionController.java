@@ -3,10 +3,12 @@ package com.project.quizapp.controller;
 
 import com.project.quizapp.model.Question;
 import com.project.quizapp.service.QuestionService;
+import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@AllArgsConstructor
 @RestController
 @RequestMapping(path ="/api")
 public class QuestionController {
