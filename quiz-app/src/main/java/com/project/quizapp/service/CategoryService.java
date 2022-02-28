@@ -2,6 +2,7 @@ package com.project.quizapp.service;
 
 import com.project.quizapp.exceptions.InformationExistsException;
 import com.project.quizapp.exceptions.InformationNotFoundException;
+import com.project.quizapp.model.Answer;
 import com.project.quizapp.model.Category;
 import com.project.quizapp.respository.CategoryRepository;
 import lombok.AllArgsConstructor;
@@ -13,24 +14,24 @@ import java.util.List;
 @AllArgsConstructor
 public class CategoryService {
 
-    private final CategoryRepository categoryRepository;
+    private final CategoryRepository categoryRepo;
 
     //POST
     public Category createCategory(Category categoryObject) {
 
-        Category category = categoryRepository.findByNameIgnoreCase(categoryObject.getName());
+        Category category = categoryRepo.findByNameIgnoreCase(categoryObject.getName());
 
         if (category != null) {
             throw new InformationExistsException("Category with name " + category.getName() + " already exists");
         } else {
-            return categoryRepository.save(categoryObject);
+            return categoryRepo.save(categoryObject);
         }
     }
 
 
     //GET ALL
     public List<Category> getAllCategories() {
-        List<Category> categoryList = categoryRepository.findAll();
+        List<Category> categoryList = categoryRepo.findAll();
         if (categoryList.isEmpty()) {
             throw new InformationNotFoundException("No categories were found");
         } else {
@@ -38,5 +39,16 @@ public class CategoryService {
         }
     }
 
+
+//DELETE METHOD
+    //DELETE BY ID
+    public String deleteCategory(Long categoryId) {
+
+        Category category = categoryRepo.findById(categoryId).orElseThrow(() -> new InformationNotFoundException(
+                "Category with ID " + categoryId + " does not exist. Please try a different Category ID."));
+
+        categoryRepo.deleteById(cateogryId);
+        return "Category: " + category.getName() + " Id: " + categoryId + " has been successfully deleted.";
+    }
 
 }

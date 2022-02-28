@@ -63,4 +63,15 @@ public class AnswerService {
     }
 
 
+//DELETE METHOD
+    //DELETE BY ID
+    public String deleteAnswer(Long answerId) {
+
+        Answer answer = answerRepo.findById(answerId).orElseThrow(() -> new InformationNotFoundException(
+                "Answer with ID " + answerId + " does not exist. Please try a different Answer ID."));
+
+        answerRepo.deleteById(answerId);
+        return "Answer: " + answer.getAnswer() + " Id: " + answerId + " has been successfully deleted.";
+    }
+
 }
