@@ -22,25 +22,11 @@ public class QuizService {
 
 //POST METHODS
 
-//    GETQUIZ() METHOD USED IN POST METHOD TO STOP DUPLICATE CODE
-    public Quiz getQuiz(Quiz quizObject, Category category) {
-        Quiz quiz = quizRepo.findByNameIgnoreCase(quizObject.getQuizName());
-        if (quiz != null) {
-            throw new InformationExistsException("Quiz with the name " + quiz.getQuizName() + " already exists.");
-        }
-        quizObject.setCategory(category);
-        return quizRepo.save(quizObject);
-    }
-
-
-
-
-
     //POST QUIZ BY CATEGORY ID
     public Quiz createQuizByCategoryId(Long categoryId, Quiz quizObject) {
 
 
-        //Find by ID throws back optional, and you can't set the regular category,
+        //Find by ID returns optional, and you can't set the regular category,
         // so to get around this I will use .or else throw method which returns regular category
         Category category = categoryRepo.findById(categoryId).orElseThrow(()-> new InformationNotFoundException(
                 "Category with ID " + categoryId + " does not exist. Please try a different Category ID."));
@@ -48,18 +34,13 @@ public class QuizService {
 //            throw new InformationNotFoundException(
 //                    "Category with ID " + categoryId + " does not exist. Please try a different Category ID.");
 //        }
-//        Quiz quiz = quizRepo.findByNameIgnoreCase(quizObject.getQuizName());
-//        if (quiz != null) {
-//            throw new InformationExistsException("Quiz with the name " + quiz.getQuizName() + " already exists.");
-//        }
-//        quizObject.setCategory(category);
-//        return quizRepo.save(quizObject);
-
-        return getQuiz(quizObject, category);
+        Quiz quiz = quizRepo.findByNameIgnoreCase(quizObject.getQuizName());
+        if (quiz != null) {
+            throw new InformationExistsException("Quiz with the name " + quiz.getQuizName() + " already exists.");
+        }
+        quizObject.setCategory(category);
+        return quizRepo.save(quizObject);
     }
-
-
-
 
 
 //GET METHODS
@@ -74,7 +55,7 @@ public class QuizService {
         }
     }
 
-    //GET ALL QUIZZES BY CATEGORY
+    //GET ALL QUIZZES BY CATEGORY ID
     public List<Quiz> getAllQuizzesByCategoryId(Long categoryId) {
 
         Optional<Category> category = categoryRepo.findById(categoryId);
