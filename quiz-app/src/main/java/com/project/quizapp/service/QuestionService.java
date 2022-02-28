@@ -6,11 +6,17 @@ import com.project.quizapp.model.Question;
 import com.project.quizapp.model.Quiz;
 import com.project.quizapp.respository.QuestionRepository;
 import com.project.quizapp.respository.QuizRepository;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
+@AllArgsConstructor
 public class QuestionService {
+
+
 
     private QuestionRepository questionRepo;
     private QuizRepository quizRepo;
