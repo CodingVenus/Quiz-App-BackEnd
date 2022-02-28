@@ -2,7 +2,6 @@ package com.project.quizapp.service;
 
 import com.project.quizapp.exceptions.InformationExistsException;
 import com.project.quizapp.exceptions.InformationNotFoundException;
-import com.project.quizapp.model.Category;
 import com.project.quizapp.model.Question;
 import com.project.quizapp.model.Quiz;
 import com.project.quizapp.respository.QuestionRepository;
@@ -61,4 +60,3 @@ public class QuestionService {
 
 }
 
-}
