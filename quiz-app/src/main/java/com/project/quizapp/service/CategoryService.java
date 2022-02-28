@@ -32,7 +32,7 @@ public class CategoryService {
     public List<Category> getAllCategories() {
         List<Category> categoryList = categoryRepository.findAll();
         if (categoryList.isEmpty()) {
-            throw new InformationNotFoundException("No categories found");
+            throw new InformationNotFoundException("No categories were found");
         } else {
             return categoryList;
         }
