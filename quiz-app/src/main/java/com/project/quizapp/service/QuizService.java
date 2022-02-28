@@ -28,7 +28,7 @@ public class QuizService {
 
         //Find by ID returns optional, and you can't set the regular category,
         // so to get around this I will use .or else throw method which returns regular category
-        Category category = categoryRepo.findById(categoryId).orElseThrow(()-> new InformationNotFoundException(
+        Category category = categoryRepo.findById(categoryId).orElseThrow(() -> new InformationNotFoundException(
                 "Category with ID " + categoryId + " does not exist. Please try a different Category ID."));
 //        if (!category.isPresent()) {
 //            throw new InformationNotFoundException(
@@ -61,13 +61,25 @@ public class QuizService {
         Optional<Category> category = categoryRepo.findById(categoryId);
 
 //        if (category == null) {
-        if (!category.isPresent()){
+        if (!category.isPresent()) {
             throw new InformationNotFoundException("Category with ID " + categoryId +
                     " does not exist");
         }
         return category.get().getQuizList();
     }
 
+
+    //DELETE METHOD
+//DELETE BY ID
+    public String deleteQuiz(Long quizId) {
+
+        Quiz quiz = quizRepo.findById(quizId).orElseThrow(() -> new InformationNotFoundException(
+                "Quiz with ID " + quizId + " does not exist. Please try a different Quiz ID."));
+
+        quizRepo.deleteById(quizId);
+        return "Quiz Name: " + quiz.getName() + " Id: " + quizId + " has been successfully deleted.";
+    }
 }
+
 
 

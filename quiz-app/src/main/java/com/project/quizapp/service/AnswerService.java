@@ -31,7 +31,7 @@ public class AnswerService {
         //it's fine if the same answer exists under a different question, so this validation will be for the specific question id
         Answer answer = answerRepo.findByQuestionIdAndAnswerIgnoreCase(questionId, answerObject.getAnswer());
         if (answer != null) {
-            throw new InformationExistsException("The answer '" + answer.getAnswer() + "' already exists. Please create a different answer.");
+            throw new InformationExistsException("The answer '" + answer.getAnswer() + "' already exists for this question. Please create a different answer.");
         }
         answerObject.setQuestion(question);
         return answerRepo.save(answerObject);
