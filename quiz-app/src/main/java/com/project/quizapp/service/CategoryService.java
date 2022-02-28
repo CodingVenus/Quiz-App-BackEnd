@@ -39,6 +39,14 @@ public class CategoryService {
     }
 
 
+    //GET BY ID
+    public Category getCategoryById(Long categoryId) {
+
+        Category category = categoryRepo.findById(categoryId).orElseThrow(() -> new InformationNotFoundException(
+                "Category with ID " + categoryId + " does not exist. Please try a different Category ID."));
+        return category;
+    }
+
 //DELETE METHOD
     //DELETE BY ID
     public String deleteCategory(Long categoryId) {

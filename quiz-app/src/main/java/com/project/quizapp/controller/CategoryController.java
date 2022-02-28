@@ -27,10 +27,15 @@ public class CategoryController {
         return categoryService.getAllCategories();
     }
 
+    @GetMapping("{categoryId}")
+    public Category getCategoryById(@PathVariable(value="categoryId") Long categoryId) {
+        return categoryService.getCategoryById(categoryId);
+    }
+
 //DELETE MAPPING
     //DELETE BY CATEGORY ID
     @DeleteMapping("{categoryId}")
-    public String categoryQuestion(@PathVariable(value="categoryId") Long categoryId) {
+    public String deleteCategory(@PathVariable(value="categoryId") Long categoryId) {
         return categoryService.deleteCategory(categoryId);
     }
 }
