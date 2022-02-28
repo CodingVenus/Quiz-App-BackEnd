@@ -40,7 +40,7 @@ QuizService quizService;
 
 //DELETE MAPPING
     //DELETE BY QUIZ ID
-    @DeleteMapping("Quiz/{quizId}")
+    @DeleteMapping("quiz/{quizId}")
     public String deleteQuiz(@PathVariable(value="quizId") Long quizId) {
         return quizService.deleteQuiz(quizId);
     }
