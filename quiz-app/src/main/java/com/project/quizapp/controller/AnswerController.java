@@ -34,4 +34,12 @@ public class AnswerController {
     public Answer createAnswerByQuestionId(@PathVariable(value="questionId") Long questionId, @RequestBody Answer answerObject){
         return answerService.createAnswerByQuestionId(questionId, answerObject);
     }
+
+
+//DELETE MAPPING
+    //DELETE BY ANSWER ID
+    @DeleteMapping("answer/{answerId}")
+    public String deleteAnswer(@PathVariable(value="answerId") Long answerId) {
+        return answerService.deleteAnswer(answerId);
+    }
 }

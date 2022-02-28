@@ -38,7 +38,7 @@ public class QuestionController {
     }
 
 //DELETE MAPPING
-    //DELETE BY QUIZ ID
+    //DELETE BY QUESTION ID
     @DeleteMapping("question/{questionId}")
     public String deleteQuestion(@PathVariable(value="questionId") Long questionId) {
         return questionService.deleteQuestion(questionId);
