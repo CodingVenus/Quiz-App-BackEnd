@@ -28,7 +28,6 @@ public class CategoryService {
     }
 
 
-
     //GET ALL
     public List<Category> getAllCategories() {
         List<Category> categoryList = categoryRepository.findAll();
