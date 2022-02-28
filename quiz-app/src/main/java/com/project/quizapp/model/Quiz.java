@@ -22,7 +22,6 @@ public class Quiz {
 
 
     //MAPPING
-    @JoinColumn()
     @JsonIgnore
     @ManyToOne
     @JoinColumn(name= "category_id")
