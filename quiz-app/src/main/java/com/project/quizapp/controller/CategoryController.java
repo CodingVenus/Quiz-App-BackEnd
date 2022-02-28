@@ -27,5 +27,10 @@ public class CategoryController {
         return categoryService.getAllCategories();
     }
 
-
+//DELETE MAPPING
+    //DELETE BY QUIZ ID
+    @DeleteMapping("category/{categoryId}")
+    public String categoryQuestion(@PathVariable(value="categoryId") Long categoryId) {
+        return categoryService.deleteCategory(categoryId);
+    }
 }
