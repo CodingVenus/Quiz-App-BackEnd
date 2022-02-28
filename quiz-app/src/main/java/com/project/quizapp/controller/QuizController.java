@@ -20,7 +20,7 @@ QuizService quizService;
 
 //GET MAPPING
     //GET QUIZZES BY CATEGORY
-    @GetMapping("category/{categoryId}/quiz/all")
+    @GetMapping("category/{categoryId}/quizzes")
     public List<Quiz> getAllQuizzesByCategoryId(@PathVariable(value="categoryId") Long categoryId){
         return quizService.getAllQuizzesByCategoryId(categoryId);
     }
