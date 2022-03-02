@@ -5,8 +5,8 @@
 The goal of Quizzle is to provide a platform that will allow you to not only search through different quizzes, but create your own as well. This app is a REST API that would allow a user to create different quiz questions based on the category of their choosing. This backend app was built using Java, Spring Boot, and PostgreSQL.
 
 #### Links
-- [Link to FrontEnd Repository](https://github.com/CodingVenus/Quiz-App-FrontEnd target=_blank)
-- [Link to FrontEnd Heroku App](https://quizzle-angular-app.herokuapp.com target=_blank)  
+- [Link to FrontEnd Repository](https://github.com/CodingVenus/Quiz-App-FrontEnd)
+- [Link to FrontEnd Heroku App](https://quizzle-angular-app.herokuapp.com)  
 
 
 ### TOOLS AND TECHNOLOGIES USED
@@ -33,7 +33,7 @@ My goal was to implement full CRUD for each model of this backend application. T
 I planned to utilize Lombok in order to have the boiler plate code for my getters, setters, and constructors automatiically generated.
 
 ### ERD DIAGRAM
-![ERD Diagram](planning/Quiz-App-UML-Diagram.png?target=_blank)
+![ERD Diagram](planning/Quiz-App-UML-Diagram.png)
 
 
 ## THE PROCESS
@@ -42,7 +42,7 @@ For this application, I created the controller mapping of each model individuall
 When starting on the frontend application for Quizzle I realized there were several REST methods I created that I would not need. For example, there would be no need to get a singular Quiz, Question, or Answer by ID. For the design of the frontend, they would only be need to be returned as a collection based on the ID of their parent resource. 
 
 ## CHALLENGES
-- I faced multiple issues with properly configuring my Spring Boot application while attempting to deploy to Heroku. Watching [this video](https://www.youtube.com/watch?v=y_idn12FB18?target=_blank) helped me overcome my issues.
+- I faced multiple issues with properly configuring my Spring Boot application while attempting to deploy to Heroku. Watching [this video](https://www.youtube.com/watch?v=y_idn12FB18) helped me overcome my issues.
 
 
 ## UNFINISHED
@@ -51,7 +51,7 @@ When starting on the frontend application for Quizzle I realized there were seve
 
 ## USER STORIES -
                                                               
-- [Click here](planning/UserStories.txt?target=_blank) to read the User Stories for this project.
+- [Click here](planning/UserStories.txt) to read the User Stories for this project.
 
 
 # ENDPOINTS
