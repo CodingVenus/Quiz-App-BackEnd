@@ -4,7 +4,7 @@
 
 The goal of Quizzle is to provide a platform that will allow you to not only search through different quizzes, but create your own as well. This app is a REST API that would allow a user to create different quiz questions based on the category of their choosing. This backend app was built using Java, Spring Boot, and PostgreSQL.
 
-####Links
+#### Links
 [Link to FrontEnd](https://github.com/CodingVenus/Quiz-App-FrontEnd) 
 [Link to FrontEnd Heroku App](https://quizzle-angular-app.herokuapp.com/)
 
@@ -51,7 +51,7 @@ When starting on the frontend application for Quizzle I realized there were seve
 
 ## USER STORIES -
                                                               
-- [Click here](planning/) to read the User Stories for this project.
+- [Click here](planning/UserStories.txt) to read the User Stories for this project.
 
 
 # ENDPOINTS
