@@ -1,9 +1,7 @@
 package com.project.quizapp.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
 
@@ -19,6 +17,18 @@ public class Question {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String question;
+    @Transient
+    @Setter(AccessLevel.NONE) //Override Lombok setter creation
+    private String quizName;
+
+    //quizName Getters and Setters
+    public String getQuizName() {
+        return this.quiz.getName();
+    }
+
+    public void setQuizName(String quizName) {
+        this.quizName = quizName;
+    }
 
     //MAPPING TO ANSWER LIST
     //ONE TO MANY
