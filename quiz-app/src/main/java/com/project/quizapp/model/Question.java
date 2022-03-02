@@ -20,6 +20,20 @@ public class Question {
     @Transient
     @Setter(AccessLevel.NONE) //Override Lombok setter creation
     private String quizName;
+    @Transient
+    @Setter(AccessLevel.NONE)
+    private String categoryName;
+
+    //category getters and setters
+    public String getCategoryName() {
+        return this.quiz.getCategoryName();
+    }
+
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
+    }
+
+
 
     //quizName Getters and Setters
     public String getQuizName() {
