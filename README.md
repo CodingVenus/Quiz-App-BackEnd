@@ -5,9 +5,9 @@
 The goal of Quizzle is to provide a platform that will allow you to not only search through different quizzes, but create your own as well. This app is a REST API that would allow a user to create different quiz questions based on the category of their choosing. This backend app was built using Java, Spring Boot, and PostgreSQL.
 
 #### Links
-- [Link to FrontEnd Repository](https://github.com/CodingVenus/Quiz-App-FrontEnd) 
+- [Link to FrontEnd Repository](https://github.com/CodingVenus/Quiz-App-FrontEnd){:target="_blank"} 
 
-- [Link to FrontEnd Heroku App](https://quizzle-angular-app.herokuapp.com/)
+- [Link to FrontEnd Heroku App](https://quizzle-angular-app.herokuapp.com/){:target="_blank"}
 
 
 ### TOOLS AND TECHNOLOGIES USED
@@ -43,7 +43,7 @@ For this application, I created the controller mapping of each model individuall
 When starting on the frontend application for Quizzle I realized there were several REST methods I created that I would not need. For example, there would be no need to get a singular Quiz, Question, or Answer by ID. For the design of the frontend, they would only be need to be returned as a collection based on the ID of their parent resource. 
 
 ## CHALLENGES
-- I faced multiple issues with properly configuring my Spring Boot application while attempting to deploy to Heroku. Watching [this video](https://www.youtube.com/watch?v=y_idn12FB18) helped me overcome my issues.
+- I faced multiple issues with properly configuring my Spring Boot application while attempting to deploy to Heroku. Watching [this video](https://www.youtube.com/watch?v=y_idn12FB18){:target="_blank"} helped me overcome my issues.
 
 
 ## UNFINISHED
