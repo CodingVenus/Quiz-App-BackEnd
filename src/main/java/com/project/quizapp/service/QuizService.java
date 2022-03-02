@@ -26,14 +26,9 @@ public class QuizService {
     public Quiz createQuizByCategoryId(Long categoryId, Quiz quizObject) {
 
 
-        //Find by ID returns optional, and you can't set the regular category,
-        // so to get around this I will use .or else throw method which returns regular category
         Category category = categoryRepo.findById(categoryId).orElseThrow(() -> new InformationNotFoundException(
                 "Category with ID " + categoryId + " does not exist. Please try a different Category ID."));
-//        if (!category.isPresent()) {
-//            throw new InformationNotFoundException(
-//                    "Category with ID " + categoryId + " does not exist. Please try a different Category ID.");
-//        }
+
         Quiz quiz = quizRepo.findByNameIgnoreCase(quizObject.getName());
         if (quiz != null) {
             throw new InformationExistsException("Quiz with the name " + quiz.getName() + " already exists.");
@@ -60,7 +55,7 @@ public class QuizService {
 
         Optional<Category> category = categoryRepo.findById(categoryId);
 
-//        if (category == null) {
+
         if (!category.isPresent()) {
             throw new InformationNotFoundException("Category with ID " + categoryId +
                     " does not exist");

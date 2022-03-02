@@ -13,6 +13,8 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 public class Question {
+
+    //FIELDS
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -24,7 +26,8 @@ public class Question {
     @Setter(AccessLevel.NONE)
     private String categoryName;
 
-    //category getters and setters
+    //categoryName getters and setters
+    //need this so i can get the category name from the quiz component in the frontend
     public String getCategoryName() {
         return this.quiz.getCategoryName();
     }
@@ -34,8 +37,8 @@ public class Question {
     }
 
 
-
     //quizName Getters and Setters
+    //need this so I can get the quiz name from the quiz component in the frontend
     public String getQuizName() {
         return this.quiz.getName();
     }

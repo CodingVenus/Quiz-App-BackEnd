@@ -1,0 +1,11 @@
+{
+  "groups": [
+    {
+      "name": "app",
+      "type": "com.project.quizapp.config.AppConfig",
+      "sourceType": "com.project.quizapp.config.AppConfig"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}
