@@ -1,5 +1,6 @@
 # **Quiz App Spring Back End**
 
+![QUIZZLE](QUIZZLE.png)
 ## OBJECTIVE
 
 The goal of Quizzle is to provide a platform that will allow you to not only search through different quizzes, but create your own as well. This app is a REST API that would allow a user to create different quiz questions based on the category of their choosing. This backend app was built using Java, Spring Boot, and PostgreSQL.
