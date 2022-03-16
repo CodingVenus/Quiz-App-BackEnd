@@ -9,6 +9,13 @@ The goal of Quizzle is to provide a platform that will allow you to not only sea
 - [Link to FrontEnd Repository](https://github.com/CodingVenus/Quiz-App-FrontEnd)
 - [Link to FrontEnd Heroku App](https://quizzle-angular-app.herokuapp.com)  
 
+**CURRENT STATUS:**
+
+**
+
+*Work in Progress*
+
+**
 
 ### TOOLS AND TECHNOLOGIES USED
 **DESIGN**
